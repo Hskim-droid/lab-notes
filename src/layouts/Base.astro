@@ -85,8 +85,15 @@ const {
   <body>
     <main>
       <header>
-        <a class="brand" href="/">Lab Notes</a>
-        <p>What this homelab is studying, in public. Deep cuts from SV and China labs. Light scoreboard: Gemini, Claude, ChatGPT, Grok.</p>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap">
+          <a class="brand" href="/">Lab Notes</a>
+          <nav class="meta" style="display:flex;gap:1rem">
+            <a href="/">Notes</a>
+            <a href="/about/">About</a>
+            <a href="https://github.com/Hskim-droid/lab-notes">GitHub</a>
+          </nav>
+        </div>
+        <p>A homelab study dump. SV × China, plus who’s actually better this week.</p>
       </header>
       <slot />
       <footer>

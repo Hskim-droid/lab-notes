@@ -1,37 +1,32 @@
 # Lab Notes
 
-Public **lab notebook** (learn in public). Homelab study, shared.
+Public lab notebook. Homelab study, shared.
 
-Silicon Valley × China frontier AI — deep, real, readable — plus a light scoreboard (Gemini / Claude / ChatGPT / Grok). English is canonical.
+**Live:** https://lab-notes-8k8.pages.dev/
 
-## GitHub + Cloudflare
+Not a news site. Not a hardware-shopping blog. Notes from studying frontier AI (Silicon Valley **and** China) plus a light scoreboard: Gemini / Claude / ChatGPT / Grok.
 
-| Layer | Place | Job |
-|-------|--------|-----|
-| Source | **GitHub** `Hskim-droid/lab-notes` | markdown + Astro |
-| Edge | **Cloudflare Pages** | build from `main` |
-| Factory (private) | `content-hub` | refinery — not this repo |
+## What’s here
 
-SNS = teaser + link here. Do not dump private `content-hub/research`.
+| Path | What |
+|------|------|
+| `src/content/posts/` | Published notes (markdown). This is the product. |
+| `src/pages/` | Site chrome (index, about). |
+| `.github/workflows/` | Build → GitHub Pages + Cloudflare Pages on `main`. |
 
-## Cloudflare Pages
+Private refinery (`content-hub`) is **not** in this repo. Only human-approved exports get imported.
 
-Connect GitHub repo `lab-notes`. Build `npm run build`. Output `dist`. Node 20+. Then set `site` in `astro.config.mjs` to the real `*.pages.dev`.
-
-## Publish (human gate)
-
-```bash
-bash /Users/claire/claude-workspace/lab-notes/scripts/import-from-hub.sh <slug>
-cd /Users/claire/claude-workspace/lab-notes
-npm run build
-git add src/content/posts/
-git commit -m "publish: <slug>"
-```
-
-## Dev
+## Local
 
 ```bash
 npm install
 npm run dev
 npm run build
 ```
+
+## Publish a note
+
+1. Review a refinery/line export.
+2. `bash scripts/import-from-hub.sh <slug> [path.md]`
+3. Edit the markdown until it reads like a note, not a pipeline log.
+4. Commit to `main` → Cloudflare deploys.
