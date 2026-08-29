@@ -15,7 +15,7 @@ const { Content } = await render(post);
 ---
 <Base title={`${post.data.title} · Lab Notes`} description={post.data.description}>
   <p class="meta">
-    <a href="/">← Notes</a> · {post.data.pubDate.toISOString().slice(0, 10)}
+    <a href={import.meta.env.BASE_URL}>← Notes</a> · {post.data.pubDate.toISOString().slice(0, 10)}
   </p>
   <h1 style="font-size:1.6rem">{post.data.title}</h1>
   <div class="prose">
