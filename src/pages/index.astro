@@ -18,7 +18,7 @@ const posts = (await getCollection('posts', ({ data }) => !data.draft)).sort(
       posts.map((p) => (
         <article>
           <h1>
-            <a href={`${import.meta.env.BASE_URL}posts/${p.id}/`}>{p.data.title}</a>
+            <a href={`${import.meta.env.BASE_URL.replace(/\/?$/, '/')}posts/${p.id}/`}>{p.data.title}</a>
           </h1>
           <div class="meta">
             {p.data.pubDate.toISOString().slice(0, 10)}
