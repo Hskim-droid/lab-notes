@@ -1,20 +1,24 @@
 # Lab Notes
 
-Public lab notebook. Homelab study, shared.
+A library of **AI study outputs**.
+
+Pick a topic worth understanding → research it with AI → keep the artifact here.
+
+Not a homelab diary. Not a course. Not a news roundup.
 
 **Live:** https://lab-notes-8k8.pages.dev/
 
-Not a news site. Not a hardware-shopping blog. Notes from studying frontier AI (Silicon Valley **and** China) plus a light scoreboard: Gemini / Claude / ChatGPT / Grok.
+Lanes that show up often: Silicon Valley × China frontier (deep), and a light scoreboard (Gemini / Claude / ChatGPT / Grok, new services).
 
-## What’s here
+## What’s in this repo
 
 | Path | What |
 |------|------|
-| `src/content/posts/` | Published notes (markdown). This is the product. |
-| `src/pages/` | Site chrome (index, about). |
-| `.github/workflows/` | Build → GitHub Pages + Cloudflare Pages on `main`. |
+| `src/content/posts/` | The study files. This is the product. |
+| `src/pages/` | Index, about. |
+| `.github/workflows/` | Deploy on `main` (Cloudflare Pages + GitHub Pages). |
 
-Private refinery (`content-hub`) is **not** in this repo. Only human-approved exports get imported.
+The private research factory is not in this repo. Only approved outputs get imported.
 
 ## Local
 
@@ -23,10 +27,3 @@ npm install
 npm run dev
 npm run build
 ```
-
-## Publish a note
-
-1. Review a refinery/line export.
-2. `bash scripts/import-from-hub.sh <slug> [path.md]`
-3. Edit the markdown until it reads like a note, not a pipeline log.
-4. Commit to `main` → Cloudflare deploys.
