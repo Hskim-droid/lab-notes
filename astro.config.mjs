@@ -1,8 +1,8 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://hskim-droid.github.io',
-  base: '/lab-notes',
+  site: 'https://lab-notes-8k8.pages.dev',
+  base: '/',
   markdown: {
     shikiConfig: { theme: 'github-dark' },
   },
